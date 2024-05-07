@@ -25,7 +25,7 @@ export const handleSubmit = async (problemName: string, languageId: number, sour
   log("isContestProblem", isContestProblem(problemUrl));
 
   chrome.tabs.create({
-    active: true,
+    active: false,
     url: getSubmitUrl(problemUrl),
   }, (tab: any) => {
         chrome.windows.update(tab.windowId, {
